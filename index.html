@@ -1,192 +1,56 @@
+
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marija Pusticki Portfolio</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:ital@1&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --green: #228B22; /* Tvoj zeleni ton */
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Quicksand', sans-serif;
-      background-color: #fff;
-      color: #000;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* Header */
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 30px 60px;
-    }
-
-    .logo {
-      font-family: 'Pacifico', cursive;
-      color: var(--green);
-      font-size: 24px;
-      font-weight: 300;
-    }
-
-    nav a {
-      margin: 0 20px;
-      font-weight: bold;
-    }
-
-    /* Hero sekcija */
-    .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 80px 60px 40px;
-      background-color: #fff;
-    }
-
-    .left {
-      flex: 1;
-    }
-
-    .right {
-      flex: 1;
-      text-align: right;
-      font-size: 18px;
-      max-width: 500px;
-    }
-
-    .hero h1 {
-      font-size: 80px;
-      font-weight: 700;
-    }
-
-    .italic {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-weight: 300;
-      margin-left: 60px;
-    }
-
-    .hero h2 {
-      font-size: 80px;
-      font-weight: 700;
-      margin-top: 10px;
-    }
-
-    /* Animacija pisaće mašine */
-    .typewriter {
-      width: 100%;
-      text-align: center;
-      margin: 30px 0;
-    }
-
-    .typewriter-text {
-      font-family: 'Pacifico', cursive;
-      font-size: 24px;
-      font-weight: 300;
-      color: var(--green);
-      border-right: 2px solid var(--green);
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      animation: typing 4s steps(40, end) forwards, blink 1s step-end infinite;
-    }
-
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-
-    @keyframes blink {
-      0%, 100% { border-color: transparent; }
-      50% { border-color: var(--green); }
-    }
-
-    /* Galerija */
-    .gallery {
-      background-color: #000;
-      padding: 60px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: auto;
-    }
-
-    /* Kontakt */
-    .contact {
-      background-color: #000;
-      color: #fff;
-      text-align: center;
-      padding: 40px;
-    }
-
-    .contact a {
-      color: var(--green);
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Marija Pusticki Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Homemade+Apple&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <!-- Header -->
-  <div class="header">
-    <div class="logo">Marija Pusticki</div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+    <header>
+        <div class="logo">Marija Pusticki</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <div class="about-text">
+                <p>Specijalizirana sam za brendiranje, dizajn logotipa, ilustraciju i digitalni dizajn. Uvijek težim stvaranju dizajna koji ostavljaju snažan vizualni dojam i istovremeno komuniciraju poruku klijenta.</p>
+            </div>
+            <div class="animated-intro">
+                <p><span class="typed-text"></span><span class="cursor">|</span></p>
+            </div>
+        </section>
+        <section class="hero-text">
+            <h1>WIR</h1>
+            <h2><span class="beschriften">BESCHRIFTEN</span></h2>
+            <h1>DAUERHAFT</h1>
+        </section>
+        <section id="contact">
+            <div class="contact-content">
+                <p>Možete me kontaktirati putem e-maila: <a href="mailto:tvojeime@email.com">tvojeime@email.com</a></p>
+                <p>Pratite me i na <a href="#">Instagramu</a> ili <a href="#">Behance-u</a></p>
+            </div>
+        </section>
+    </main>
+    <script>
+        const text = "hi! my name is\nMarija Pusticki,\nwelcome to my\nportfolio :)";
+        const typedText = document.querySelector(".typed-text");
+        let index = 0;
 
-  <!-- Hero sekcija -->
-  <section class="hero" id="about">
-    <div class="left">
-      <!-- Animacija pisaće mašine -->
-      <div class="typewriter">
-        <div class="typewriter-text">😊 Hi! My name is Marija Pusticki, welcome to my portfolio :)</div>
-      </div>
+        function type() {
+            if (index < text.length) {
+                typedText.innerHTML += text[index] === "\n" ? "<br>" : text[index];
+                index++;
+                setTimeout(type, 100);
+            }
+        }
 
-      <h1>WIR</h1>
-      <h1 class="italic">BESCHRIFTEN</h1>
-      <h2>DAUERHAFT</h2>
-    </div>
-    <div class="right">
-      <p>Specijalizirana sam za brendiranje, dizajn logotipa, ilustraciju i digitalni dizajn. Uvijek težim stvaranju dizajna koji ostavljaju snažan vizualni dojam i istovremeno komuniciraju poruku klijenta.</p>
-    </div>
-  </section>
-
-  <!-- Galerija -->
-  <section class="gallery" id="work">
-    <img src="https://via.placeholder.com/300x400?text=Rad+1" alt="Rad 1" />
-    <img src="https://via.placeholder.com/300x400?text=Rad+2" alt="Rad 2" />
-    <img src="https://via.placeholder.com/300x400?text=Rad+3" alt="Rad 3" />
-    <img src="https://via.placeholder.com/300x400?text=Rad+4" alt="Rad 4" />
-  </section>
-
-  <!-- Kontakt -->
-  <section class="contact" id="contact">
-    <p>Možete me kontaktirati putem e-maila: <a href="mailto:tvojeime@email.com">tvojeime@email.com</a></p>
-    <p>Pratite me i na <a href="https://www.instagram.com/" target="_blank">Instagramu</a> ili <a href="https://www.behance.net/" target="_blank">Behance-u</a></p>
-  </section>
+        window.onload = type;
+    </script>
 </body>
 </html>

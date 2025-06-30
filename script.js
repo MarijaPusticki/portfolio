@@ -1,8 +1,8 @@
 const lines = [
-  "hi! my name is",
+  "Hallo! Ich heiße",
   "Marija Pusticki,",
-  "welcome to my",
-  "portfolio ☺"
+  "herzlich willkommen in",
+  "meinem Portfolio :)"
 ];
 
 const container = document.getElementById("typewriter");

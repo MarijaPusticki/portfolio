@@ -27,23 +27,17 @@ nav a {
 
 .main-content {
   display: flex;
-  padding: 60px 80px;
-  height: 320px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 60px 20px 60px;
 }
 
 .text-left {
   width: 66.66%;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-.text-right {
-  width: 33.33%;
-  font-size: 18px;
-  padding-left: 40px;
-  display: flex;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 60px; /* spušta animaciju */
 }
 
 .animated-lines {
@@ -52,8 +46,8 @@ nav a {
   color: #2a8f4b;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  line-height: 1.9;
+  gap: 4px; /* manji razmak među redovima */
+  line-height: 1.4;
   padding-bottom: 20px;
 }
 
@@ -62,17 +56,21 @@ nav a {
   overflow: hidden;
   white-space: nowrap;
   width: 0;
-  animation: typing 1.2s steps(30, end) forwards;
+  animation: typing 1s steps(30, end) forwards;
 }
 
-.animated-lines .line:nth-child(2) {
-  animation-delay: 1.5s;
-}
-.animated-lines .line:nth-child(3) {
-  animation-delay: 3s;
-}
-.animated-lines .line:nth-child(4) {
-  animation-delay: 4.5s;
+.animated-lines .line:nth-child(2) { animation-delay: 1.5s; }
+.animated-lines .line:nth-child(3) { animation-delay: 3s; }
+.animated-lines .line:nth-child(4) { animation-delay: 4.5s; }
+
+.text-right {
+  width: 33.33%;
+  font-size: 18px;
+  padding-left: 20px;
+  display: flex;
+  align-items: flex-start;
+  align-self: flex-start;
+  padding-top: 20px; /* pomiče tekst prema gore */
 }
 
 @keyframes typing {

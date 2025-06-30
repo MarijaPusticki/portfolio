@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: white;
+    background-color: white;
     scroll-behavior: smooth;
 }
 
@@ -10,13 +10,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 40px;
 }
 
 .logo {
     font-family: 'Homemade Apple', cursive;
-    font-size: 24px;
-    color: #228B22;
+    font-size: 26px;
+    color: #2a8f4b;
 }
 
 nav a {
@@ -26,84 +26,71 @@ nav a {
     font-weight: bold;
 }
 
-.intro {
+.about-section {
     display: flex;
-    justify-content: space-between;
-    padding: 40px 60px;
+    justify-content: flex-end;
+    padding: 40px 60px 10px 60px;
 }
 
-.about {
-    width: 45%;
+.about-text {
+    width: 50%;
     font-size: 18px;
 }
 
-.animated-text {
-    width: 45%;
+.animated-lines {
+    padding: 20px 60px 60px 60px;
     font-family: 'Homemade Apple', cursive;
-    color: #228B22;
-    font-size: 24px;
-    line-height: 1.6;
+    font-size: 26px;
+    color: #2a8f4b;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
 }
 
-.animated-text p span {
+.typewriter {
     display: inline-block;
-    white-space: nowrap;
     overflow: hidden;
-    border-right: .15em solid green;
-    animation: typing 2s steps(30, end), blink-caret .75s step-end infinite;
-}
-
-.animated-text p:nth-child(2) span {
-    animation-delay: 2.5s;
-    animation-fill-mode: both;
-}
-
-.animated-text p:nth-child(3) span {
-    animation-delay: 5s;
-    animation-fill-mode: both;
-}
-
-.animated-text p:nth-child(4) span {
-    animation-delay: 7.5s;
-    animation-fill-mode: both;
+    white-space: nowrap;
+    border-right: 2px solid #2a8f4b;
+    animation: typing 2s steps(30, end) forwards, blink 0.75s step-end infinite;
+    width: 0;
 }
 
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from { width: 0; }
+    to { width: 100%; }
 }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: green }
+@keyframes blink {
+    50% { border-color: transparent; }
 }
 
 .main-text {
     padding: 40px 60px;
 }
 
-.main-text h1 {
-    font-family: 'Inter', sans-serif;
-    font-size: 2.6em;
+.main-text h1, .main-text h2 {
+    font-size: 3.4em;
     margin: 0;
+    line-height: 1.1em;
 }
 
 .main-text h2 {
     font-family: 'Playfair Display', serif;
-    font-weight: 100;
-    font-size: 2.3em;
-    margin: 0;
-    padding-left: 40px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    padding-left: 1em;
 }
 
 footer {
-    background: black;
+    background-color: black;
     color: white;
     text-align: center;
     padding: 40px;
 }
 
 footer a {
-    color: #228B22;
+    color: #2a8f4b;
     text-decoration: none;
 }

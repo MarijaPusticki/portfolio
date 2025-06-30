@@ -1,107 +1,76 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Moj Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #000;
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    header {
-      text-align: center;
-      padding: 100px 20px 40px;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-      color: #00ffd5;
-    }
-
-    h2 {
-      font-size: 36px;
-      margin-top: 80px;
-      text-align: center;
-      color: #ff6ec7;
-    }
-
-    p {
-      max-width: 600px;
-      margin: 20px auto;
-      line-height: 1.6;
-      font-size: 18px;
-      text-align: center;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 40px 20px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    .contact {
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    a {
-      color: #00ffd5;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio – Summer Campaign</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0d0d0d;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #f5f5f5;
+            animation: fadeIn 1s ease-in;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            color: #ffffff;
+            margin-bottom: 60px;
+        }
+        .project {
+            margin-bottom: 60px;
+            animation: fadeUp 1s ease-out;
+        }
+        img {
+            width: 100%;
+            border-radius: 12px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+        .caption {
+            margin-top: 15px;
+            font-size: 1.2em;
+            text-align: center;
+            color: #ffcc00;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Marija Pustički</h1>
-    <p>Grafička dizajnerica sa strašću za kreativna i vizualno privlačna rješenja.</p>
-  </header>
+    <div class="container">
+        <h1>Summer Campaign Showcase</h1>
 
-  <section>
-    <h2>O meni</h2>
-    <p>Specijalizirana sam za brendiranje, dizajn logotipa, ilustraciju i digitalni dizajn. Uvijek težim stvaranju dizajna koji ostavljaju snažan vizualni dojam, a istovremeno komuniciraju poruku klijenta.</p>
-  </section>
+        <div class="project">
+            <img src="summer_melt.jpeg" alt="Melting Price">
+            <div class="caption">Temperatures rise, prices melt! Take advantage of summer discounts on verified used cars.</div>
+        </div>
 
-  <section>
-    <h2>Radovi</h2>
-    <div class="gallery">
-      <img src="https://via.placeholder.com/400x300?text=Rad+1" alt="Rad 1" />
-      <img src="https://via.placeholder.com/400x300?text=Rad+2" alt="Rad 2" />
-      <img src="https://via.placeholder.com/400x300?text=Rad+3" alt="Rad 3" />
+        <div class="project">
+            <img src="wave_discount.jpeg" alt="Wave Sale">
+            <div class="caption">Catch the summer wave of savings – explore verified used cars at great prices.</div>
+        </div>
+
+        <div class="project">
+            <img src="sunglasses_offer.jpeg" alt="Sunglasses Price Cut">
+            <div class="caption">Look in the direction of lower prices – focus on great deals today!</div>
+        </div>
     </div>
-  </section>
-
-  <section class="contact">
-    <h2>Kontakt</h2>
-    <p>Možete me kontaktirati putem e-maila: <a href="mailto:tvojeime@email.com">tvojeime@email.com</a></p>
-    <p>Pratite me i na <a href="https://www.instagram.com/" target="_blank">Instagramu</a> ili <a href="https://www.behance.net/" target="_blank">Behance-u</a></p>
-  </section>
 </body>
 </html>

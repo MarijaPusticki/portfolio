@@ -1,0 +1,100 @@
+
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: white;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Homemade Apple', cursive;
+    color: #228748;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+
+main {
+    padding: 40px;
+}
+
+#about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.about-text {
+    width: 50%;
+    text-align: right;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+.animated-intro {
+    font-family: 'Homemade Apple', cursive;
+    font-size: 22px;
+    color: #228748;
+    width: 40%;
+    line-height: 1.4;
+}
+
+.cursor {
+    display: inline-block;
+    background-color: #228748;
+    width: 1px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+.hero-text {
+    padding-top: 40px;
+}
+
+.hero-text h1, .hero-text h2 {
+    margin: 0;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+
+.beschriften {
+    font-style: italic;
+    font-weight: 200;
+}
+
+#contact {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+#contact a {
+    color: #228748;
+    text-decoration: none;
+}

@@ -50,12 +50,14 @@ nav a {
 }
 
 .animated-lines span {
-    display: inline-block;
+    display: block;
     white-space: nowrap;
     overflow: hidden;
     animation: typing 2s steps(30, end) forwards;
     width: 0;
-    border: none; /* maknuta zelena crta */
+    border: none;
+    padding: 0;
+    margin: 0;
 }
 
 .animated-lines span:nth-child(2) { animation-delay: 2.4s; }

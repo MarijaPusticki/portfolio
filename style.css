@@ -27,31 +27,57 @@ nav a {
 
 .main-content {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 40px 60px;
+  padding: 60px 80px;
+  height: 320px;
 }
 
 .text-left {
-  width: 60%;
+  width: 66.66%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  min-height: 200px;
-}
-
-#typewriter {
-  font-family: 'Homemade Apple', cursive;
-  font-size: 26px;
-  color: #2a8f4b;
-  line-height: 1.9;
-  white-space: pre-line;
+  align-items: center;
 }
 
 .text-right {
-  width: 40%;
+  width: 33.33%;
   font-size: 18px;
   padding-left: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.animated-lines {
+  font-family: 'Homemade Apple', cursive;
+  font-size: 26px;
+  color: #2a8f4b;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  line-height: 1.9;
+  padding-bottom: 20px;
+}
+
+.animated-lines .line {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 1.2s steps(30, end) forwards;
+}
+
+.animated-lines .line:nth-child(2) {
+  animation-delay: 1.5s;
+}
+.animated-lines .line:nth-child(3) {
+  animation-delay: 3s;
+}
+.animated-lines .line:nth-child(4) {
+  animation-delay: 4.5s;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
 }
 
 .main-text {
@@ -70,40 +96,6 @@ nav a {
   font-weight: 300;
   letter-spacing: -1px;
   padding-left: 1em;
-}
-
-.gallery {
-  background-color: black;
-  color: white;
-  padding: 60px;
-}
-
-.gallery-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.gallery-item {
-  width: calc(20% - 10px);
-  background: #000;
-  text-align: center;
-  color: white;
-}
-
-.gallery-item img {
-  width: 100%;
-  display: block;
-}
-
-.gallery-item p {
-  font-weight: bold;
-  font-size: 12px;
-}
-
-.gallery-item span {
-  font-size: 10px;
-  color: #ccc;
 }
 
 footer {

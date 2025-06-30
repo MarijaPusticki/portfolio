@@ -1,100 +1,102 @@
 
 body {
     margin: 0;
-    font-family: 'Raleway', sans-serif;
-    background-color: white;
+    font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
     align-items: center;
+    padding: 20px 40px;
 }
 
 .logo {
-    font-family: 'Homemade Apple', cursive;
-    color: #228748;
-    font-size: 24px;
+    font-family: 'Sacramento', cursive;
+    font-size: 28px;
+    color: #24803b;
     font-weight: 300;
 }
 
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: black;
-    font-weight: 700;
-    font-family: 'Raleway', sans-serif;
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
 }
 
-main {
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
     padding: 40px;
 }
 
-#about {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 40px;
+.hero .left {
+    flex: 1;
 }
 
-.about-text {
-    width: 50%;
-    text-align: right;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
+.hero .right {
+    flex: 1;
+    font-size: 18px;
+    padding-left: 40px;
 }
 
-.animated-intro {
-    font-family: 'Homemade Apple', cursive;
-    font-size: 22px;
-    color: #228748;
-    width: 40%;
+.animation {
+    font-family: 'Sacramento', cursive;
+    font-size: 28px;
+    font-weight: 300;
+    color: #24803b;
+    white-space: pre-line;
     line-height: 1.4;
 }
 
-.cursor {
+.typography {
+    padding: 80px 40px;
+}
+
+.typography h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.typography h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 300;
+    margin-left: 40px;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.green {
+    color: #24803b;
+}
+
+.typewriter {
+    overflow: hidden;
     display: inline-block;
-    background-color: #228748;
-    width: 1px;
-    animation: blink 0.7s infinite;
+    white-space: nowrap;
+    animation: typing 4s steps(40, end), blink .75s step-end infinite;
+    border-right: 2px solid #24803b;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
 }
 
 @keyframes blink {
-    0%, 50%, 100% {
-        opacity: 1;
-    }
-    25%, 75% {
-        opacity: 0;
-    }
-}
-
-.hero-text {
-    padding-top: 40px;
-}
-
-.hero-text h1, .hero-text h2 {
-    margin: 0;
-    font-weight: 700;
-    font-family: 'Raleway', sans-serif;
-}
-
-.beschriften {
-    font-style: italic;
-    font-weight: 200;
-}
-
-#contact {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-}
-
-#contact a {
-    color: #228748;
-    text-decoration: none;
+    from, to { border-color: transparent }
+    50% { border-color: #24803b; }
 }

@@ -1,56 +1,48 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
 <head>
     <meta charset="UTF-8">
     <title>Marija Pusticki Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Homemade+Apple&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Inter:wght@400;700&family=Playfair+Display:ital,wght@1,300&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="logo">Marija Pusticki</div>
         <nav>
-            <a href="#about">About</a>
-            <a href="#work">Work</a>
-            <a href="#contact">Contact</a>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
+
     <main>
-        <section id="about">
-            <div class="about-text">
-                <p>Specijalizirana sam za brendiranje, dizajn logotipa, ilustraciju i digitalni dizajn. Uvijek težim stvaranju dizajna koji ostavljaju snažan vizualni dojam i istovremeno komuniciraju poruku klijenta.</p>
+        <section class="hero">
+            <div class="left">
+                <div class="animation">
+                    <span class="typewriter">hi! my name is<br>Marija Pusticki,<br>welcome to my<br>portfolio :)</span>
+                </div>
             </div>
-            <div class="animated-intro">
-                <p><span class="typed-text"></span><span class="cursor">|</span></p>
+            <div class="right" id="about">
+                <p>Specijalizirana sam za brendiranje, dizajn logotipa, ilustraciju i digitalni dizajn. 
+                Uvijek težim stvaranju dizajna koji ostavljaju snažan vizualni dojam i istovremeno 
+                komuniciraju poruku klijenta.</p>
             </div>
         </section>
-        <section class="hero-text">
+
+        <section class="typography">
             <h1>WIR</h1>
-            <h2><span class="beschriften">BESCHRIFTEN</span></h2>
+            <h2>BESCHRIFTEN</h2>
             <h1>DAUERHAFT</h1>
         </section>
-        <section id="contact">
-            <div class="contact-content">
-                <p>Možete me kontaktirati putem e-maila: <a href="mailto:tvojeime@email.com">tvojeime@email.com</a></p>
-                <p>Pratite me i na <a href="#">Instagramu</a> ili <a href="#">Behance-u</a></p>
-            </div>
+
+        <section class="footer" id="contact">
+            <p>Možete me kontaktirati putem e-maila: <span class="green">tvojeime@email.com</span><br>
+            Pratite me i na <span class="green">Instagramu</span> ili <span class="green">Behance-u</span></p>
         </section>
     </main>
-    <script>
-        const text = "hi! my name is\nMarija Pusticki,\nwelcome to my\nportfolio :)";
-        const typedText = document.querySelector(".typed-text");
-        let index = 0;
-
-        function type() {
-            if (index < text.length) {
-                typedText.innerHTML += text[index] === "\n" ? "<br>" : text[index];
-                index++;
-                setTimeout(type, 100);
-            }
-        }
-
-        window.onload = type;
-    </script>
 </body>
 </html>

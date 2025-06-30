@@ -63,6 +63,33 @@
     <p>Možete me kontaktirati putem e-maila: <a href="mailto:tvojeime@email.com">tvojeime@email.com</a></p>
     <p>Pratite me i na <a href="#">Instagramu</a> ili <a href="#">Behance-u</a></p>
   </footer>
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
 
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.close');
+  const galleryImages = document.querySelectorAll('.gallery-item img');
+
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
 </body>
 </html>

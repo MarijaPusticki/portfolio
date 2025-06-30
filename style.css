@@ -26,32 +26,60 @@ nav a {
     font-weight: bold;
 }
 
-.content {
+.main-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     padding: 40px 60px 20px 60px;
 }
 
-.left {
+.text-left {
     width: 45%;
+    display: flex;
+    flex-direction: column;
 }
 
-.right {
+.animated-lines {
+    font-family: 'Homemade Apple', cursive;
+    font-size: 26px;
+    color: #2a8f4b;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    line-height: 1.4;
+    margin-top: 40px;
+}
+
+.animated-lines span {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #2a8f4b;
+    animation: typing 2s steps(30, end) forwards, blink 0.75s step-end infinite;
+    width: 0;
+}
+
+.animated-lines span:nth-child(2) { animation-delay: 2.4s; }
+.animated-lines span:nth-child(3) { animation-delay: 4.8s; }
+.animated-lines span:nth-child(4) { animation-delay: 7.2s; }
+
+.text-right {
     width: 50%;
     font-size: 18px;
+    padding-left: 40px;
 }
 
-.typewriter-text {
-    font-family: 'Homemade Apple', cursive;
-    color: #2a8f4b;
-    font-size: 26px;
-    line-height: 1.5;
-    min-height: 120px;
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
 }
 
 .main-text {
-    padding: 40px 60px;
+    padding: 60px;
 }
 
 .main-text h1, .main-text h2 {

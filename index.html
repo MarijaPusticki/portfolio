@@ -17,13 +17,16 @@
         </nav>
     </header>
 
-    <section class="content">
-        <div class="left">
-            <div class="typewriter-text" id="typewriter">
-                <span></span>
+    <section class="main-content">
+        <div class="text-left">
+            <div class="animated-lines">
+                <span class="typewriter" style="animation-delay: 0s;">hi! my name is</span>
+                <span class="typewriter" style="animation-delay: 2.4s;">Marija Pusticki,</span>
+                <span class="typewriter" style="animation-delay: 4.8s;">welcome to my</span>
+                <span class="typewriter" style="animation-delay: 7.2s;">portfolio ☺</span>
             </div>
         </div>
-        <div class="right" id="about">
+        <div class="text-right" id="about">
             <p>
                 Specijalizirana sam za brendiranje, dizajn logotipa, ilustraciju i digitalni dizajn.
                 Uvijek težim stvaranju dizajna koji ostavljaju snažan vizualni dojam i istovremeno
@@ -42,35 +45,5 @@
         <p>Možete me kontaktirati putem e-maila: <a href="mailto:tvojeime@email.com">tvojeime@email.com</a></p>
         <p>Pratite me i na <a href="#">Instagramu</a> ili <a href="#">Behance-u</a></p>
     </footer>
-
-    <script>
-        const lines = [
-            "hi! my name is",
-            "Marija Pusticki,",
-            "welcome to my",
-            "portfolio ☺"
-        ];
-        const container = document.getElementById("typewriter").querySelector("span");
-
-        let line = 0;
-        let char = 0;
-
-        function typeLine() {
-            if (line < lines.length) {
-                if (char < lines[line].length) {
-                    container.innerHTML += lines[line].charAt(char);
-                    char++;
-                    setTimeout(typeLine, 50);
-                } else {
-                    container.innerHTML += "<br>";
-                    char = 0;
-                    line++;
-                    setTimeout(typeLine, 400);
-                }
-            }
-        }
-
-        window.onload = typeLine;
-    </script>
 </body>
 </html>

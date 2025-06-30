@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moj Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 20px 40px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      color: #00ffd5;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-top: 80px;
+      text-align: center;
+      color: #ff6ec7;
+    }
+
+    p {
+      max-width: 600px;
+      margin: 20px auto;
+      line-height: 1.6;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .contact {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    a {
+      color: #00ffd5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tvoje Ime</h1>
+    <p>Grafička dizajnerica sa strašću za kreativna i vizualno privlačna rješenja.</p>
+  </header>
+
+  <section>
+    <h2>O meni</h2>
+    <p>Specijalizirana sam za brendiranje, dizajn logotipa, ilustraciju i digitalni dizajn. Uvijek težim stvaranju dizajna koji ostavljaju snažan vizualni dojam, a istovremeno komuniciraju poruku klijenta.</p>
+  </section>
+
+  <section>
+    <h2>Radovi</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/400x300?text=Rad+1" alt="Rad 1" />
+      <img src="https://via.placeholder.com/400x300?text=Rad+2" alt="Rad 2" />
+      <img src="https://via.placeholder.com/400x300?text=Rad+3" alt="Rad 3" />
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Kontakt</h2>
+    <p>Možete me kontaktirati putem e-maila: <a href="mailto:tvojeime@email.com">tvojeime@email.com</a></p>
+    <p>Pratite me i na <a href="https://www.instagram.com/" target="_blank">Instagramu</a> ili <a href="https://www.behance.net/" target="_blank">Behance-u</a></p>
+  </section>
+</body>
+</html>

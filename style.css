@@ -2,6 +2,7 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
+    background: white;
     scroll-behavior: smooth;
 }
 
@@ -9,86 +10,62 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 20px;
 }
 
 .logo {
-    font-family: 'Sacramento', cursive;
-    font-size: 28px;
-    color: #24803b;
-    font-weight: 300;
+    font-family: 'Homemade Apple', cursive;
+    font-size: 24px;
+    color: #228B22;
 }
 
-nav ul {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-}
-
-nav ul li a {
+nav a {
+    margin: 0 15px;
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
 
-.hero {
+.intro {
     display: flex;
     justify-content: space-between;
-    padding: 40px;
+    padding: 40px 60px;
 }
 
-.hero .left {
-    flex: 1;
-}
-
-.hero .right {
-    flex: 1;
+.about {
+    width: 45%;
     font-size: 18px;
-    padding-left: 40px;
 }
 
-.animation {
-    font-family: 'Sacramento', cursive;
-    font-size: 28px;
-    font-weight: 300;
-    color: #24803b;
-    white-space: pre-line;
-    line-height: 1.4;
+.animated-text {
+    width: 45%;
+    font-family: 'Homemade Apple', cursive;
+    color: #228B22;
+    font-size: 24px;
+    line-height: 1.6;
 }
 
-.typography {
-    padding: 80px 40px;
-}
-
-.typography h1 {
-    font-size: 48px;
-    font-weight: bold;
-}
-
-.typography h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    font-weight: 300;
-    margin-left: 40px;
-}
-
-.footer {
-    background-color: black;
-    color: white;
-    padding: 40px;
-    text-align: center;
-}
-
-.green {
-    color: #24803b;
-}
-
-.typewriter {
-    overflow: hidden;
+.animated-text p span {
     display: inline-block;
     white-space: nowrap;
-    animation: typing 4s steps(40, end), blink .75s step-end infinite;
-    border-right: 2px solid #24803b;
+    overflow: hidden;
+    border-right: .15em solid green;
+    animation: typing 2s steps(30, end), blink-caret .75s step-end infinite;
+}
+
+.animated-text p:nth-child(2) span {
+    animation-delay: 2.5s;
+    animation-fill-mode: both;
+}
+
+.animated-text p:nth-child(3) span {
+    animation-delay: 5s;
+    animation-fill-mode: both;
+}
+
+.animated-text p:nth-child(4) span {
+    animation-delay: 7.5s;
+    animation-fill-mode: both;
 }
 
 @keyframes typing {
@@ -96,7 +73,37 @@ nav ul li a {
     to { width: 100% }
 }
 
-@keyframes blink {
+@keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: #24803b; }
+    50% { border-color: green }
+}
+
+.main-text {
+    padding: 40px 60px;
+}
+
+.main-text h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.6em;
+    margin: 0;
+}
+
+.main-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+    font-size: 2.3em;
+    margin: 0;
+    padding-left: 40px;
+}
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+footer a {
+    color: #228B22;
+    text-decoration: none;
 }

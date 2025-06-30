@@ -1,48 +1,44 @@
 
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marija Pusticki Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Inter:wght@400;700&family=Playfair+Display:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Inter:wght@400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="logo">Marija Pusticki</div>
         <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="left">
-                <div class="animation">
-                    <span class="typewriter">hi! my name is<br>Marija Pusticki,<br>welcome to my<br>portfolio :)</span>
-                </div>
-            </div>
-            <div class="right" id="about">
-                <p>Specijalizirana sam za brendiranje, dizajn logotipa, ilustraciju i digitalni dizajn. 
-                Uvijek težim stvaranju dizajna koji ostavljaju snažan vizualni dojam i istovremeno 
-                komuniciraju poruku klijenta.</p>
-            </div>
-        </section>
+    <section class="intro">
+        <div class="about" id="about">
+            <p>Specijalizirana sam za brendiranje, dizajn logotipa, ilustraciju i digitalni dizajn. Uvijek težim stvaranju dizajna koji ostavljaju snažan vizualni dojam i istovremeno komuniciraju poruku klijenta.</p>
+        </div>
+        <div class="animated-text">
+            <p><span class="typewriter">hi! my name is</span></p>
+            <p><span class="typewriter">Marija Pusticki,</span></p>
+            <p><span class="typewriter">welcome to my</span></p>
+            <p><span class="typewriter">portfolio :)</span></p>
+        </div>
+    </section>
 
-        <section class="typography">
-            <h1>WIR</h1>
-            <h2>BESCHRIFTEN</h2>
-            <h1>DAUERHAFT</h1>
-        </section>
+    <section class="main-text">
+        <h1>WIR</h1>
+        <h2>BESCHRIFTEN</h2>
+        <h1>DAUERHAFT</h1>
+    </section>
 
-        <section class="footer" id="contact">
-            <p>Možete me kontaktirati putem e-maila: <span class="green">tvojeime@email.com</span><br>
-            Pratite me i na <span class="green">Instagramu</span> ili <span class="green">Behance-u</span></p>
-        </section>
-    </main>
+    <footer id="contact">
+        <p>Možete me kontaktirati putem e-maila: <a href="mailto:tvojeime@email.com">tvojeime@email.com</a></p>
+        <p>Pratite me i na <a href="#">Instagramu</a> ili <a href="#">Behance-u</a></p>
+    </footer>
 </body>
 </html>

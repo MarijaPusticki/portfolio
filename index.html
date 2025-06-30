@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,300&display=swap" rel="stylesheet">
+  <!-- Fontovi -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Playfair+Display:ital,wght@1,300&display=swap" rel="stylesheet">
   <style>
     :root {
       --green: #388e3c;
@@ -39,10 +40,11 @@
     .logo {
       position: absolute;
       top: 30px;
-      right: 30px;
-      font-size: 18px;
+      left: 30px;
+      font-size: 24px;
       color: var(--green);
-      font-weight: 700;
+      font-family: 'Caveat', cursive;
+      font-weight: 400;
       letter-spacing: 1px;
     }
 
@@ -61,7 +63,7 @@
     }
 
     .animation {
-      font-size: 20px;
+      font-size: 24px;
       color: var(--green);
       margin-bottom: 100px;
       font-weight: 400;
@@ -70,7 +72,7 @@
       border-right: 2px solid var(--green);
       width: 0;
       animation: typing 4s steps(60, end) forwards, blink 0.75s step-end infinite;
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'Caveat', cursive;
     }
 
     @keyframes typing {
@@ -179,13 +181,13 @@
       }
 
       .animation {
-        font-size: 16px;
+        font-size: 20px;
       }
 
       .logo {
         position: static;
-        text-align: right;
         margin-bottom: 10px;
+        text-align: left;
         display: block;
       }
     }

@@ -67,17 +67,6 @@ Feel free to contact me for collaborations, inquiries, or just to talk about art
     <p>Whether you’re starting a new project, need a fresh perspective, or just want to connect, feel free to reach out at <a href="mailto:marija.pusticki@gmail.com">marija.pusticki@gmail.com</a></p>
     <p>You can also find me here <a href="#">LinkedIn</a> or <a href="#">Instagram</a></p>
     <section id="contact-form">
-  
-  <h3>Whether you’re starting a new project, need a fresh perspective, or just want to connect, feel free to reach out at</h3>
-  <form action="https://formspree.io/f/mjkrljna" method="POST">
-    <input type="email" name="email" placeholder="Tvoj e-mail" required>
-    <textarea name="message" placeholder="Tvoja poruka" rows="5" required></textarea>
-    <button type="submit">SEND</button>
-    <form action="https://formspree.io/f/mjkrljna" method="POST" id="contactForm">
-  <input type="email" name="email" placeholder="Your email" required>
-  <textarea name="message" placeholder="Your message" rows="5" required></textarea>
-  <button type="submit">Send</button>
-  <div id="form-status" class="form-status" style="display: none;"></div>
 </form>
   </form>
 </section>
@@ -139,39 +128,5 @@ lightbox.style.display = 'flex';
     }
   });
 
-</script>
-  <script>
-  const form = document.getElementById('contactForm');
-  const statusDiv = document.getElementById('form-status');
-
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        statusDiv.textContent = "✅ Thanks for your message! I will get back to you as soon as possible.";
-        statusDiv.style.display = 'block';
-        form.reset();
-      } else {
-        statusDiv.textContent = "❌ Oops! Something went wrong. Please try again.";
-        statusDiv.style.display = 'block';
-      }
-
-    } catch (error) {
-      statusDiv.textContent = "❌ There was a problem submitting the form.";
-      statusDiv.style.display = 'block';
-    }
-  });
-</script>
 </body>
 </html>

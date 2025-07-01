@@ -148,7 +148,7 @@ nav a {
 
 /* Lightbox */
 .lightbox {
-  display: flex;
+  display: none;
   position: fixed;
   z-index: 999;
   left: 0;

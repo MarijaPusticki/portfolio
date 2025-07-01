@@ -160,6 +160,9 @@ footer a {
   background-color: rgba(0,0,0,0.9);
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
 }
 
 .lightbox-content {

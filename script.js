@@ -81,4 +81,20 @@ document.querySelectorAll("a").forEach(link => {
     closeLightbox();
   });
 });
+function closeLightbox() {
+  lightbox.style.display = 'none';
+}
 
+// Klik izvan slike zatvara lightbox
+lightbox.addEventListener("click", function(e) {
+  if (e.target === lightbox || e.target === lightboxDesc) {
+    closeLightbox();
+  }
+});
+
+// Zatvaranje lightboxa kad korisnik klikne na neki link
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    closeLightbox();
+  });
+});

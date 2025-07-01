@@ -140,38 +140,6 @@ nav a {
   color: #aaa;
 }
 
-footer {
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 40px;
-}
-
-footer a {
-  color: #2a8f4b;
-  text-decoration: none;
-}
-
-.social-icons {
-  margin-top: 20px;
-}
-
-.social-icons a {
-  margin: 0 10px;
-  display: inline-block;
-}
-
-.social-icons img {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.3s ease;
-  filter: none; /* uklonjen bijeli filter */
-}
-
-.social-icons img:hover {
-  transform: scale(1.2);
-}
-
 .lightbox {
   display: none;
   position: fixed;
@@ -204,6 +172,7 @@ footer a {
   color: white;
   font-weight: bold;
   cursor: pointer;
+  z-index: 1001;
 }
 
 .prev, .next {
@@ -214,26 +183,21 @@ footer a {
   font-weight: bold;
   color: white;
   cursor: pointer;
-  padding: 15px;
-  user-select: none;
+  padding: 16px;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 50%;
+  user-select: none;
   z-index: 1001;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .prev:hover, .next:hover {
   background-color: rgba(42, 143, 75, 0.8);
-  transform: translateY(-50%) scale(1.1);
+  color: white;
 }
 
-.prev {
-  left: 30px;
-}
-
-.next {
-  right: 30px;
-}
+.prev { left: 30px; }
+.next { right: 30px; }
 
 .lightbox-description {
   color: white;
@@ -241,6 +205,18 @@ footer a {
   margin-top: 20px;
   font-size: 14px;
   max-width: 80%;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+footer a {
+  color: #2a8f4b;
+  text-decoration: none;
 }
 
 #contact-form {
@@ -282,6 +258,25 @@ footer a {
   cursor: pointer;
 }
 
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
 @media (max-width: 768px) {
   .main-content {
     flex-direction: column;
@@ -305,19 +300,14 @@ footer a {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
   .prev, .next {
-  font-size: 30px;
-  padding: 12px;
-  top: 45%;
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
-}
+    font-size: 28px;
+    padding: 10px;
+    top: 45%;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
 
-.prev {
-  left: 15px;
-}
-
-.next {
-  right: 15px;
-}
+  .prev { left: 15px; }
+  .next { right: 15px; }
 }

@@ -38,4 +38,29 @@ lightbox.addEventListener('click', (e) => {
   if (e.target === lightbox) {
     lightbox.style.display = 'none';
   }
+  document.addEventListener("keydown", function (e) {
+  if (document.getElementById("lightbox").style.display === "flex") {
+    if (e.key === "ArrowLeft") {
+      showPrev();
+    } else if (e.key === "ArrowRight") {
+      showNext();
+    } else if (e.key === "Escape") {
+      closeLightbox();
+    }
+  }
 });
+  let startX = 0;
+
+document.getElementById("lightbox").addEventListener("touchstart", function(e) {
+  startX = e.touches[0].clientX;
+});
+
+document.getElementById("lightbox").addEventListener("touchend", function(e) {
+  let endX = e.changedTouches[0].clientX;
+  if (startX - endX > 50) {
+    showNext(); // swipe left
+  } else if (endX - startX > 50) {
+    showPrev(); // swipe right
+  }
+});
+

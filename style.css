@@ -290,6 +290,9 @@ footer a {
     align-items: center;
     z-index: 1001;
     border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .prev {
@@ -299,28 +302,24 @@ footer a {
   .next {
     right: 10px !important;
   }
+
+  .lightbox {
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   .lightbox-content {
     max-width: 90vw;
     height: auto;
     margin: 0 auto;
+    display: block;
   }
 
   .lightbox-description {
-    text-align: center;
+    max-width: 90vw;
     padding: 0 10px;
-  }
-
-  .lightbox {
-    align-items: center;
-    justify-content: center;
     text-align: center;
-  }
-
-  .prev {
-    left: 5vw !important;
-  }
-
-  .next {
-    right: 5vw !important;
   }
 }

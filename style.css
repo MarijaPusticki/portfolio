@@ -97,6 +97,18 @@ nav a {
   padding-left: 1em;
 }
 
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+footer a {
+  color: #2a8f4b;
+  text-decoration: none;
+}
+
 .gallery {
   background-color: black;
   padding: 60px;
@@ -140,6 +152,7 @@ nav a {
   color: #aaa;
 }
 
+/* Lightbox */
 .lightbox {
   display: none;
   position: fixed;
@@ -184,11 +197,12 @@ nav a {
   color: white;
   cursor: pointer;
   padding: 16px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   user-select: none;
-  z-index: 1001;
+  z-index: 1002;
   transition: background 0.3s ease;
+  touch-action: none;
 }
 
 .prev:hover, .next:hover {
@@ -196,8 +210,8 @@ nav a {
   color: white;
 }
 
-.prev { left: 30px; }
-.next { right: 30px; }
+.prev { left: 20px; }
+.next { right: 20px; }
 
 .lightbox-description {
   color: white;
@@ -205,57 +219,6 @@ nav a {
   margin-top: 20px;
   font-size: 14px;
   max-width: 80%;
-}
-
-footer {
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 40px;
-}
-
-footer a {
-  color: #2a8f4b;
-  text-decoration: none;
-}
-
-#contact-form {
-  background: black;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-#contact-form h3 {
-  color: #2a8f4b;
-  margin-bottom: 30px;
-  font-family: 'Inter', sans-serif;
-}
-
-#contact-form form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-#contact-form input,
-#contact-form textarea {
-  padding: 12px;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-#contact-form button {
-  background: #2a8f4b;
-  color: white;
-  padding: 12px;
-  border: none;
-  font-size: 16px;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
 .social-icons {
@@ -270,6 +233,7 @@ footer a {
 .social-icons img {
   width: 30px;
   height: 30px;
+  filter: none; /* uklonili invert */
   transition: transform 0.3s ease;
 }
 
@@ -302,12 +266,7 @@ footer a {
   }
 
   .prev, .next {
-    font-size: 28px;
+    font-size: 30px;
     padding: 10px;
-    top: 45%;
-    background-color: rgba(255, 255, 255, 0.3);
   }
-
-  .prev { left: 15px; }
-  .next { right: 15px; }
 }

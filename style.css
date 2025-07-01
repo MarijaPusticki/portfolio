@@ -244,6 +244,14 @@ footer a {
 .social-icons img:hover {
   transform: scale(1.2);
 }
+/* Osnovni izgled strelica na svim veličinama */
+.prev, .next {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -270,10 +278,25 @@ footer a {
     gap: 20px;
   }
 
-  .prev, .next {
+  .prev,
+  .next {
     font-size: 30px;
-    padding: 15px;
-    left: 10px;
-    right: 10px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    border-radius: 8px;
+  }
+
+  .prev {
+    left: 10px !important;
+  }
+
+  .next {
+    right: 10px !important;
   }
 }

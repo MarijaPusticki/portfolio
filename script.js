@@ -64,3 +64,21 @@ document.getElementById("lightbox").addEventListener("touchend", function(e) {
   }
 });
 
+  function closeLightbox() {
+  lightbox.style.display = 'none';
+}
+
+// Zatvaranje klikom na pozadinu (ali ne na sliku ili opis)
+lightbox.addEventListener("click", function(e) {
+  if (e.target === lightbox || e.target === lightboxDesc) {
+    closeLightbox();
+  }
+});
+
+// Zatvori lightbox kad klikneš na bilo koji link
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    closeLightbox();
+  });
+});
+

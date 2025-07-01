@@ -196,3 +196,10 @@ footer a {
 .prev:hover, .next:hover {
   color: #2a8f4b;
 }
+.lightbox-description {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  max-width: 80%;
+}

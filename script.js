@@ -1,10 +1,10 @@
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
+const lightboxDesc = document.getElementById('lightbox-desc');
 const closeBtn = document.querySelector('.close');
 const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
 const galleryImages = document.querySelectorAll('.gallery-item img');
-const lightboxDesc = document.getElementById('lightbox-desc');
 
 let currentIndex = 0;
 
@@ -12,6 +12,7 @@ function showImage(index) {
   lightbox.style.display = 'flex';
   const selectedImg = galleryImages[index];
   lightboxImg.src = selectedImg.src;
+
   const desc = selectedImg.getAttribute('data-description') || selectedImg.nextElementSibling?.innerText || '';
   lightboxDesc.textContent = desc;
   currentIndex = index;
@@ -43,21 +44,18 @@ lightbox.addEventListener('click', (e) => {
   }
 });
 
-// Swipe touch podrška
+// Touch/swipe support
 let startX = 0;
 
-lightbox.addEventListener("touchstart", (e) => {
+lightbox.addEventListener('touchstart', (e) => {
   startX = e.touches[0].clientX;
-});
+}, false);
 
-lightbox.addEventListener("touchend", (e) => {
-  const endX = e.changedTouches[0].clientX;
-  if (startX - endX > 50) {
-    currentIndex = (currentIndex + 1) % galleryImages.length;
-    showImage(currentIndex);
-  } else if (endX - startX > 50) {
-    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-    showImage(currentIndex);
+lightbox.addEventListener('touchend', (e) => {
+  let endX = e.changedTouches[0].clientX;
+  if (endX - startX > 50) {
+    prevBtn.click();
+  } else if (startX - endX > 50) {
+    nextBtn.click();
   }
-});
-
+}, false);

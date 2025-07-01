@@ -34,3 +34,23 @@ function typeLine() {
 }
 
 typeLine();
+let startX = 0;
+
+lightbox.addEventListener('touchstart', (e) => {
+  startX = e.changedTouches[0].clientX;
+}, false);
+
+lightbox.addEventListener('touchend', (e) => {
+  const endX = e.changedTouches[0].clientX;
+  const deltaX = endX - startX;
+
+  if (deltaX > 50) {
+    // swipe right → prikaži prethodnu
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    showImage(currentIndex);
+  } else if (deltaX < -50) {
+    // swipe left → prikaži sljedeću
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    showImage(currentIndex);
+  }
+}, false);

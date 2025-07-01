@@ -148,7 +148,7 @@ nav a {
 
 /* Lightbox */
 .lightbox {
-  display: none;
+  display: flex;
   position: fixed;
   z-index: 999;
   left: 0;
@@ -164,7 +164,7 @@ nav a {
 }
 
 .lightbox-content {
-  max-width: 90%;
+  max-width: 90vw;
   max-height: 90%;
   border: 4px solid white;
   border-radius: 8px;
@@ -198,12 +198,13 @@ nav a {
 }
 
 .prev, .next {
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.prev { left: 20px; }
-.next { right: 20px; }
+.prev { left: calc(50% - 45vw); }
+.next { right: calc(50% - 45vw); }
 
 .prev:hover, .next:hover {
   background-color: rgba(42, 143, 75, 0.8);

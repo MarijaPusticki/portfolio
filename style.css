@@ -325,6 +325,6 @@ footer a {
   .lightbox-content {
   margin-left: auto !important;
   margin-right: auto !important;
-  transform: translateX(-2px);
+  transform: translateX(-3px);
 }
 }

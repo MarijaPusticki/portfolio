@@ -227,8 +227,13 @@ footer a {
   transform: translateY(-50%) scale(1.1);
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev {
+  left: 30px;
+}
+
+.next {
+  right: 30px;
+}
 
 .lightbox-description {
   color: white;
@@ -300,4 +305,19 @@ footer a {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+  .prev, .next {
+  font-size: 30px;
+  padding: 12px;
+  top: 45%;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+.prev {
+  left: 15px;
+}
+
+.next {
+  right: 15px;
+}
 }

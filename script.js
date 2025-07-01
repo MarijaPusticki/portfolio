@@ -1,56 +1,63 @@
-const lines = [
-  "Hallo! Ich heiße",
-  "Marija Pusticki,",
-  "herzlich willkommen in",
-  "meinem Portfolio :)"
-];
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.querySelector('.close');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+const galleryImages = document.querySelectorAll('.gallery-item img');
+const lightboxDesc = document.getElementById('lightbox-desc');
 
-const container = document.getElementById("typewriter");
-let lineIndex = 0;
-let charIndex = 0;
+let currentIndex = 0;
 
-function typeLine() {
-  if (lineIndex < lines.length) {
-    const line = lines[lineIndex];
-    const current = container.querySelectorAll("div")[lineIndex];
-
-    if (!current) {
-      const newLine = document.createElement("div");
-      container.appendChild(newLine);
-    }
-
-    container.querySelectorAll("div")[lineIndex].textContent += line[charIndex] || '';
-
-    charIndex++;
-
-    if (charIndex < line.length) {
-      setTimeout(typeLine, 60);
-    } else {
-      lineIndex++;
-      charIndex = 0;
-      setTimeout(typeLine, 300);
-    }
-  }
+function showImage(index) {
+  lightbox.style.display = 'flex';
+  const selectedImg = galleryImages[index];
+  lightboxImg.src = selectedImg.src;
+  const desc = selectedImg.getAttribute('data-description') || selectedImg.nextElementSibling?.innerText || '';
+  lightboxDesc.textContent = desc;
+  currentIndex = index;
 }
 
-typeLine();
+galleryImages.forEach((img, index) => {
+  img.addEventListener('click', () => {
+    showImage(index);
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % galleryImages.length;
+  showImage(currentIndex);
+});
+
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  showImage(currentIndex);
+});
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) {
+    lightbox.style.display = 'none';
+  }
+});
+
+// Swipe touch podrška
 let startX = 0;
 
-lightbox.addEventListener('touchstart', (e) => {
-  startX = e.changedTouches[0].clientX;
-}, false);
+lightbox.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
 
-lightbox.addEventListener('touchend', (e) => {
+lightbox.addEventListener("touchend", (e) => {
   const endX = e.changedTouches[0].clientX;
-  const deltaX = endX - startX;
-
-  if (deltaX > 50) {
-    // swipe right → prikaži prethodnu
-    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-    showImage(currentIndex);
-  } else if (deltaX < -50) {
-    // swipe left → prikaži sljedeću
+  if (startX - endX > 50) {
     currentIndex = (currentIndex + 1) % galleryImages.length;
     showImage(currentIndex);
+  } else if (endX - startX > 50) {
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    showImage(currentIndex);
   }
-}, false);
+});
+

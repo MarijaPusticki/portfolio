@@ -317,3 +317,9 @@ footer a {
 #contact-form button:hover {
   background: #246f3c;
 }
+.form-status {
+  color: #2a8f4b;
+  font-size: 16px;
+  margin-top: 15px;
+  font-family: 'Inter', sans-serif;
+}

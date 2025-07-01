@@ -83,10 +83,15 @@ Feel free to contact me for collaborations, inquiries, or just to talk about art
   let currentIndex = 0;
 
   function showImage(index) {
-    lightbox.style.display = 'flex';
-    lightboxImg.src = galleryImages[index].src;
-    currentIndex = index;
-  }
+lightbox.style.display = 'flex';
+  const selectedImg = galleryImages[index];
+  lightboxImg.src = selectedImg.src;
+
+  const desc = selectedImg.getAttribute('data-description');
+  document.getElementById('lightbox-desc').textContent = desc || '';
+  
+  currentIndex = index;
+}
 
   galleryImages.forEach((img, index) => {
     img.addEventListener('click', () => {

@@ -322,4 +322,9 @@ footer a {
     padding: 0 10px;
     text-align: center;
   }
+  .lightbox-content {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  transform: translateX(-2px);
+}
 }
